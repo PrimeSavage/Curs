@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.classes.Controller">
+   <children>
+      <TabPane prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Ready Queue of Processes">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="processTableReadyQueue" prefHeight="351.0" prefWidth="600.0">
+                          <columns>
+                            <TableColumn fx:id="processIdReadyQueue" prefWidth="75.0" text="id" />
+                            <TableColumn fx:id="processNameReadyQueue" prefWidth="75.0" text="name" />
+                              <TableColumn fx:id="processPriorityReadyQueue" prefWidth="75.0" text="priority" />
+                              <TableColumn fx:id="processTimeReadyQueue" prefWidth="75.0" text="time" />
+                              <TableColumn fx:id="processMemoryReadyQueue" prefWidth="75.0" text="memory" />
+                              <TableColumn fx:id="processTimeInReadyQueue" prefWidth="75.0" text="timeIn" />
+                              <TableColumn fx:id="processBurstTimeReadyQueue" prefWidth="75.0" text="burstTime" />
+                              <TableColumn fx:id="processStateReadyQueue" prefWidth="75.0" text="state" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Rejected queue of Processes">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="processTableRejectQueue" prefHeight="339.0" prefWidth="600.0">
+                           <columns>
+                              <TableColumn fx:id="processIdRejectQueue" prefWidth="75.0" text="id" />
+                              <TableColumn fx:id="processNameRejectQueue" prefWidth="75.0" text="name" />
+                              <TableColumn fx:id="processPriorityRejectQueue" prefWidth="75.0" text="priority" />
+                              <TableColumn fx:id="processTimeRejectQueue" prefWidth="75.0" text="time" />
+                              <TableColumn fx:id="processMemoryRejectQueue" prefWidth="75.0" text="memory" />
+                              <TableColumn fx:id="processTimeInRejectQueue" prefWidth="75.0" text="timeIn" />
+                              <TableColumn fx:id="processBurstTimeRejectQueue" prefWidth="75.0" text="burstTime" />
+                              <TableColumn fx:id="processStateRejectQueue" prefWidth="75.0" text="state" />
+                           </columns>
+                        </TableView>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Finished queue of Processes">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="processTableFinishedQueue" prefHeight="339.0" prefWidth="600.0">
+                           <columns>
+                              <TableColumn fx:id="processIdFinishedQueue" prefWidth="75.0" text="id" />
+                              <TableColumn fx:id="processNameFinishedQueue" prefWidth="75.0" text="name" />
+                              <TableColumn fx:id="processPriorityFinishedQueue" prefWidth="75.0" text="priority" />
+                              <TableColumn fx:id="processTimeFinishedQueue" prefWidth="75.0" text="time" />
+                              <TableColumn fx:id="processMemoryFinishedQueue" prefWidth="75.0" text="memory" />
+                              <TableColumn fx:id="processTimeInFinishedQueue" prefWidth="75.0" text="timeIn" />
+                              <TableColumn fx:id="processBurstTimeFinishedQueue" prefWidth="75.0" text="burstTime" />
+                              <TableColumn fx:id="processStateFinishedQueue" prefWidth="75.0" text="state" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Statistics">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="allProcessesQuantity" editable="false" layoutX="390.0" layoutY="23.0" prefHeight="25.0" prefWidth="87.0" />
+                        <TextField fx:id="quantityRejectQueue" editable="false" layoutX="390.0" layoutY="57.0" prefHeight="25.0" prefWidth="86.0" />
+                        <TextField fx:id="quantityFinishedQueue" editable="false" layoutX="390.0" layoutY="91.0" prefHeight="25.0" prefWidth="86.0" />
+                        <Label layoutX="33.0" layoutY="26.0" text="All processes quantity">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="34.0" layoutY="62.0" text="Quantity reject processes">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="34.0" layoutY="94.0" text="Quantity finished processes">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="33.0" layoutY="127.0" text="Quantity processes left system">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="quantityProcessesLeftSystem" editable="false" layoutX="390.0" layoutY="122.0" prefHeight="25.0" prefWidth="87.0" />
+                        <Label layoutX="33.0" layoutY="159.0" text="Аverage number of service wait cycles">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="averageServiceWait" editable="false" layoutX="390.0" layoutY="154.0" prefHeight="25.0" prefWidth="87.0" />
+                        <Label layoutX="33.0" layoutY="189.0" text="Processor idle cycles">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="processorIdleCycles" editable="false" layoutX="390.0" layoutY="184.0" prefHeight="25.0" prefWidth="87.0" />
+                        <Label layoutX="33.0" layoutY="222.0" text="Average waiting time for a process in a ready queue ">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="averageProcessWait" editable="false" layoutX="390.0" layoutY="217.0" prefHeight="25.0" prefWidth="87.0" />
+                        <Label layoutX="33.0" layoutY="253.0" text="Average time of the process">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="averageProcessTime" editable="false" layoutX="390.0" layoutY="248.0" prefHeight="25.0" prefWidth="87.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
